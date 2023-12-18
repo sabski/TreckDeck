@@ -1,7 +1,7 @@
 
 <script setup lang="ts">
-import type ISeries from '@/objects/iSeries';
-import type ISeriesSearch from '@/objects/iSeriesSearch';
+import type ISeries from '@/interfaces/iSeries';
+import type ISeriesSearch from '@/interfaces/iSeriesSearch';
 import SeriesService from '@/services/seriesServise';
 import { watchEffect } from 'vue';
 import { ref } from "vue";
@@ -23,10 +23,12 @@ watchEffect(async () => {
 <template>
   <div class="main-deck">
     {{ deckName }}
-    <SeriesListItem v-for="series in seriesList" :model="series" :key="series.uid" />
+
+    <SeriesListItem v-if="seriesList.length > 0" v-for="series in seriesList" :series="series" :key="series.uid" />
   </div>
 </template>
 
 <style scoped>
 
 </style>
+@/interfaces/iSeries@/interfaces/iSeriesSearch

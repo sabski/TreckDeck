@@ -1,4 +1,4 @@
-import type ISeries from "./iSeries";
+import type ISeries from "../interfaces/iSeries";
 
 export default class Series implements ISeries {
 

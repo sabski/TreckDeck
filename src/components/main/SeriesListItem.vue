@@ -7,9 +7,11 @@
 
 <template>
   <div class="seriesItem">
-        Hello
         {{
-            currentSeries?.title
+            currentSeries.title
+        }}
+        {{
+            currentSeries.uid
         }}
   </div>
 </template>
