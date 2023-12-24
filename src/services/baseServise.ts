@@ -1,14 +1,14 @@
 
 import axios from "axios";
 
-const httpInstamce =  axios.create({
+const httpInstance =  axios.create({
     baseURL: "https://stapi.co/api/",
     headers: {
         "Content-type": "application/json"
     }
 });
 
-httpInstamce.interceptors.response.use(( response) => {
+httpInstance.interceptors.response.use((response) => {
     //TODO: check some statuses
     return response.data;
 }, (error) => {
@@ -16,4 +16,4 @@ httpInstamce.interceptors.response.use(( response) => {
     return Promise.reject(error);
 });
 
-export default httpInstamce;
+export default httpInstance;
